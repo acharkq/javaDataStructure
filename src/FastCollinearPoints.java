@@ -21,26 +21,23 @@ public class FastCollinearPoints {
         segments = new LinkedList<>();
         for (int i = 0; i < points.length - 3; i++) {
             Arrays.sort(points, i + 1, points.length, points[i].slopeOrder());
-            for (int j = i + 1; j < points.length - 2; j++) {
-                int span = 1;
-                while (j < points.length - 1) {
-                    if (points[i].slopeTo(points[j]) != points[i].slopeTo(points[j + 1]))
-                        break;
+            int j, span;
+            for (j = i + 1, span = 1; j < points.length; j++) {
+                if (points[i].slopeTo(points[j]) == points[i].slopeTo(points[j + 1]) && (j + 1) != points.length)
                     span++;
-                    j++;
-                }
-                if (span >= 3) {
+                else if (span >= 3) {
                     boolean exit = false;
                     for (int k = 0; k < i; k++)
                         if (points[i].slopeTo(points[k]) == points[i].slopeTo(points[j])) {
                             exit = true;
                             break;
                         }
+                    span = 1;
                     if (exit)
                         continue;
                     segments.addLast(new LineSegment(points[i], points[j]));
                     len++;
-                }
+                } else span = 1;
             }
             Arrays.sort(points, i + 1, points.length);
         }
