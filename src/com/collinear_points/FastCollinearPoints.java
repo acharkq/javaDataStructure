@@ -1,3 +1,5 @@
+package com.collinear_points;
+
 import java.util.Arrays;
 import java.util.LinkedList;
 

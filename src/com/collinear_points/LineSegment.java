@@ -1,3 +1,5 @@
+package com.collinear_points;
+
 public class LineSegment {
     private final Point p;
     private final Point q;

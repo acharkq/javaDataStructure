@@ -11,7 +11,7 @@
 import java.util.Comparator;
 import edu.princeton.cs.algs4.StdDraw;
 
-public class Point implements Comparable<Point> {
+public class Point implements Comparable<com.collinear_points.Point> {
 
     private final int x;     // x-coordinate of this point
     private final int y;     // y-coordinate of this point
@@ -42,7 +42,7 @@ public class Point implements Comparable<Point> {
      *
      * @param that the other point
      */
-    public void drawTo(Point that) {
+    public void drawTo(com.collinear_points.Point that) {
         /* DO NOT MODIFY */
         StdDraw.line(this.x, this.y, that.x, that.y);
     }
@@ -58,7 +58,7 @@ public class Point implements Comparable<Point> {
      * @param  that the other point
      * @return the slope between this point and the specified point
      */
-    public double slopeTo(Point that) {
+    public double slopeTo(com.collinear_points.Point that) {
         /* YOUR CODE HERE */
     }
 
@@ -74,7 +74,7 @@ public class Point implements Comparable<Point> {
      *         point; and a positive integer if this point is greater than the
      *         argument point
      */
-    public int compareTo(Point that) {
+    public int compareTo(com.collinear_points.Point that) {
         /* YOUR CODE HERE */
     }
 
@@ -84,7 +84,7 @@ public class Point implements Comparable<Point> {
      *
      * @return the Comparator that defines this ordering on points
      */
-    public Comparator<Point> slopeOrder() {
+    public Comparator<com.collinear_points.Point> slopeOrder() {
         /* YOUR CODE HERE */
     }
 

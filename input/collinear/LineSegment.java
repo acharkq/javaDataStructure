@@ -1,3 +1,5 @@
+import com.collinear_points.Point;
+
 /*************************************************************************
  *  Compilation:  javac LineSegment.java
  *  Execution:    none
